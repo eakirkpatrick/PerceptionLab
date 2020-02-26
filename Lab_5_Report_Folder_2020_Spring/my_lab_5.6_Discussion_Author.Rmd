@@ -1,0 +1,8 @@
+---
+output: pdf_document
+header-includes: \usepackage{placeins}
+---
+
+# Discussion of Author P. Scrivener 
+
+I strongly disagree with the conclusions of my other two authors. They don't know what they are talking about and none of our independent variables influenced our dependent variable.

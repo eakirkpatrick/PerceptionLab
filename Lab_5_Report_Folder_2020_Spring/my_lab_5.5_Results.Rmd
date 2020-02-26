@@ -1,0 +1,28 @@
+---
+output: pdf_document
+header-includes: \usepackage{placeins}
+---
+
+# Results
+
+```{r include=FALSE}
+
+knitr::opts_chunk$set(echo = FALSE)
+
+# add additional packages that you need
+library("bootES")
+library("lmerTest")
+library("psych")
+library("knitr")
+library("tidyverse")
+
+# define the folder containing additional files
+add_path <- "my_lab_5.0_additional_files"
+
+# load source code for Fab Four Graphs 
+source(file.path(add_path, "LOH_Fab_Four_ggplot.R"))
+
+
+```
+
+Here are our results. You will be really impressed by our great graphs showing that our hypothesis was strongly supported by the results. We used bootstrapping procedures with `bootES` [@R-bootES] to estimate the size and reliablility of our main effect size. Cohen [-@cohen_statistical_1988; @cohen_things_1990] would be proud of us; we certainly are grateful for him. We also fitted a linear mixed-effects regression model to our data using the `lmer` function in the R-package `lme4`. We got happy F ratios. What great results we got.

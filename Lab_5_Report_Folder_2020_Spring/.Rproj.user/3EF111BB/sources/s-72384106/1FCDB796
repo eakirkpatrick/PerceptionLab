@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1582757362088.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "33325106",
+    "id" : "1FCDB796",
+    "lastKnownWriteTime" : 1582757798,
+    "last_content_update" : 1582757798980,
+    "path" : "~/Documents/School/2020/Perception/Lab5/Lab_5_Report_Folder_2020_Spring/my_lab_5.3_Introduction.Rmd",
+    "project_path" : "my_lab_5.3_Introduction.Rmd",
+    "properties" : {
+        "cursorPosition" : "11,501",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

@@ -1,0 +1,8 @@
+---
+output: pdf_document
+header-includes: \usepackage{placeins}
+---
+
+# Discussion of Lotta I. Parole 
+
+Execpt for constant interference and snide remarks by the second author while we were planning this experiment, I realy enjoy the experience of designing and carrying out this experiment. We got geat results and show important effects.

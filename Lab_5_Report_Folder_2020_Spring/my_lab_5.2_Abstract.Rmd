@@ -1,0 +1,10 @@
+---
+output: pdf_document
+header-includes: \usepackage{placeins}
+---
+
+\newpage
+
+# Abstract
+
+The abstract is about 150 words long and explains what you did, why, and what you found.

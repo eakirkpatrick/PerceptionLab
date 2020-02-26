@@ -1,0 +1,20 @@
+---
+output: pdf_document
+header-includes: \usepackage{placeins}
+---
+
+# Methods
+
+Here is how we did the experiment. Our basic design was to measure reaction time and probability of being correct under two different conditions: fear vs. joy and sad vs. happy. 
+
+## Stimuli
+
+We used some cool equipment
+
+## Subjects
+
+Lots of eager students served as subjects. We are happy that they volunteered.
+
+## Procedure
+
+We presented stimuli on nice Macintosh computers running PsychoPy [@peirce_psychopy_psychophysics_2007; @peirce_generating_2009; @peirce_building_2018; @peirce_psychopy2_2019] software.  First we trained the subjects, followed by a 25 hour testing session. No bathroom breaks were allowed.

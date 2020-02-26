@@ -1,0 +1,8 @@
+---
+output: pdf_document
+header-includes: \usepackage{placeins}
+---
+
+# Discussion of Susan B. Antimony 
+
+I loved working with the second author. She had lots of ideas (some good) and I think our results show that independent variables are not as independent as many misguided people believe. Futher research is needed. Give us money and we'll do it.

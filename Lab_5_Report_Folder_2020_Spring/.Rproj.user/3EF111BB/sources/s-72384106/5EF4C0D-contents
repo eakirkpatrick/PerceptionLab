@@ -1,0 +1,28 @@
+---
+output: pdf_document
+header-includes: \usepackage{placeins}
+---
+
+```{r create_r-references}
+r_refs(file = "my_lab_5.0_additional_files/r-references.bib")
+```
+
+\newpage
+
+# Authors Notes
+
+
+This manuscript was prepared with RStudio [@RStudio2019] using R-Markdown. We used r `cite_r("my_Lab_5.0_additional_files/r-references.bib")` for all our analyses. 
+The experiment was run with PsychoPy3 software [@peirce_psychopy2_2019; @peirce_building_2018; @peirce_generating_2009; @peirce_psychopy_psychophysics_2007]. We used r `cite_r("my_Lab_5.0_additional_files/r-references.bib")` for all our analyses.
+
+
+\newpage
+
+# References
+
+<!-- Don't change these 4 lines. They produce the hanging indent -->
+<!-- required by APA style bibliography -->
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+\setlength{\parskip}{8pt}
+\noindent
