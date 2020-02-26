@@ -1,0 +1,122 @@
+---
+title: "Group_05_Aggregate_Data_Files"
+author: "Lewis O. Harvey, Jr."
+date: "21 February 2020"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library("tidyverse")
+
+rm(list = ls())
+
+```
+
+R code for combining the data from the individual subject's csv data files from PsychoPy into one data frame, and writing that data frame out to a single csv file. The participant column, which contains the subject's initials, is replaced by a subject number to preserve anonymity. This subject number is randomly assigned among the `n` data files.
+
+you can customize this script in three major ways:
+
+1. You must specify the folder that contains the data files to be combined
+2. You can change the name of the output file (file.output) below
+3. specify which of the many columns produced by PsychoPy in the csv file to keep by modifying the vector of column names stored in object 'keep'.
+
+
+```{r}
+# name of output file (change the name if you want to)
+file.output <- "group_05_aggregated_data.csv"
+
+# turn off randomizing order of subjects
+# helps locate problem files.
+# Set to TRUE when all the problems are solved
+RANDOMIZE <- TRUE
+
+## find folder with the data files
+path_name <- "data folder name goes here"
+
+# make a list of just the csv files
+filelist <- list.files(path = path_name, pattern = "\\.csv")
+
+# calculate the number of subjects
+n.subjects <- length(filelist)
+
+# create vector of 1:n subject numbers in random order
+if(RANDOMIZE) {
+    subject.no <- sample(1:n.subjects)
+} else {
+    subject.no <- 1:n.subjects
+}
+
+# create a vector of subject identifiers 
+# to be used in place of initials
+subjID <- str_c("s", str_pad(subject.no, width, 2, pad = "0"))
+
+```
+
+```{r}
+
+msg <- paste("Number of files to be aggregated =", n.subjects)
+print(msg)
+
+# loop through all the data files and create
+# one data frame from all of them
+
+# you can eliminate some of the columns if you know which ones you want to keep
+# change the names as appropriate in 'keep' below to save those columns and
+# then uncomment the "keep" line below. Of course you will have to change these
+# names to match the data from your experiment
+
+keep <- c("participant", "Word", "Valence", "Arousal", "Emotion",
+          "Word_Frequency", "Correct_Answer", "Correct_Response",
+          "key_resp_4.keys", "key_resp_4.corr", "key_resp_4.rt",
+          "date", "psychopyVersion", "frameRate")
+
+```
+
+`r msg`
+
+```{r}
+
+df.all <- data.frame()
+file.count <- 0
+for (fn in filelist) {
+    file.count <- file.count + 1
+    print(paste("processing file no.", file.count, "  ", fn,
+                "   subject number", subject.no[file.count]))
+    # read file
+    tmp <- read.csv(file.path(path_name, fn)) %>%
+        # remove the 2 rows with no words
+        filter(Word != "") %>%
+        # put anonymized subjID into the participant column
+        mutate(participant = subjID[file.count]) %>%
+        # remove factor levels that are empty
+        droplevels() %>%
+        # get rid of X column if present
+        select(-matches("X")) 
+    
+    # keep desire columns
+    ## if you get an error message that 'all_of()' is not found
+    ## delete the line below and remove the comment marker from the
+    ## line below it
+    if (exists('keep')) tmp <- select(tmp, all_of(keep))
+    # if (exists('keep')) tmp <- select(tmp, keep)
+    
+    # add this subject to data frame df.all
+    df.all <- rbind(df.all, tmp)
+}
+
+df.all <- df.all %>% 
+    # make participant a factor
+    mutate(participant = factor(participant)) %>% 
+    # reorder the subjects by ID value, placing them in random order
+    # to make them even more anonymous
+    arrange(participant)
+
+write.csv(df.all, file.output, row.names = FALSE)
+
+print(paste("aggregated data written to file '", file.output, "'", sep = ""))
+
+```
+
+
