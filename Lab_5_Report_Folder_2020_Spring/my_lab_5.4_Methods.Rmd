@@ -5,6 +5,18 @@ header-includes: \usepackage{placeins}
 
 # Methods
 
+DV= game performance, milliseconds
+IV = control, erratic, contant {beeping at the same decibel} 
+
+Two groups, each will be randomly assigned to erratic or constant beeping and will complete a game with headphones on
+
+Between subjects factor- order of control and beeping 
+Between subjects factors - type of beeping {erratic or constant}
+	4 Groups 
+Randomly assigned which task first 
+Randomly assigned which order of beeping condition
+
+
 Here is how we did the experiment. Our basic design was to measure reaction time and probability of being correct under two different conditions: fear vs. joy and sad vs. happy. 
 
 ## Stimuli
