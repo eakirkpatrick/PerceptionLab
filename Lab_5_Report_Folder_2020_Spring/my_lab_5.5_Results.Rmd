@@ -22,7 +22,45 @@ add_path <- "my_lab_5.0_additional_files"
 # load source code for Fab Four Graphs 
 source(file.path(add_path, "LOH_Fab_Four_ggplot.R"))
 
+```
+
+```{r echo=FALSE}
+
+x <- seq(0,10,0.1)
+y1 <- dnorm(x, mean = 3.5, sd = 1.5)
+y2 <- dnorm(x, mean = 4, sd = 1.5)
+y3 <- dnorm(x, mean = 4.5, sd = 1.5)
+y4 <- dnorm(x, mean = 5.0, sd = 1.5)
+plot(x, y1, type="l", col="blue",
+     main="Reaction Time for Arithmetic Recall Task",
+     xlab="Reaction Time in Seconds",
+     ylab="Average Participant Density (Normalized)") +
+    lines(x, y2, type="l", col="red") +
+    lines(x, y3, type="l", col="green") +
+    lines(x, y4, type="l", col="purple")
+
+text(x=c(1.233294, 2.143318, 2.895076, 3.607268), y=c(0.1054426, 0.1268105, 0.1466520, 0.1710724), col= c("blue", "red", "green", "purple"), labels = c("White Noise", "Silence", "Constant Tone", "Irregular Tone"))
 
 ```
 
-Here are our results. You will be really impressed by our great graphs showing that our hypothesis was strongly supported by the results. We used bootstrapping procedures with `bootES` [@R-bootES] to estimate the size and reliablility of our main effect size. Cohen [-@cohen_statistical_1988; @cohen_things_1990] would be proud of us; we certainly are grateful for him. We also fitted a linear mixed-effects regression model to our data using the `lmer` function in the R-package `lme4`. We got happy F ratios. What great results we got.
+Although we couldn't actually execute the experiment, these are the results that may have happened for the arithmetic recall task.
+
+```{r echo=FALSE}
+x <- seq(10,50,0.1)
+y1 <- dnorm(x, mean = 27, sd = 5)
+y2 <- dnorm(x, mean = 35, sd = 5)
+y3 <- dnorm(x, mean = 42, sd = 5)
+y4 <- dnorm(x, mean = 20, sd = 5)
+plot(x, y1, type="l", col="blue",
+     main="Average time spent in Game",
+     xlab="Time Alive",
+     ylab="Average Participant Performance Density (Normalized)") +
+    lines(x, y2, type="l", col="red") +
+    lines(x, y3, type="l", col="green") +
+    lines(x, y4, type="l", col="purple")
+
+text(x=c(16.77491, 22.84642, 29.01876, 38.03986),y=c(0.04399353, 0.05475439, 0.04078816, 0.05589917), col= c("purple", "blue", "red", "green"), labels = c("Irregular Tone", "White Noise", "Silence", "Constant Tone"))
+
+
+```
+These are the results that may have happened if we were to run the experiment of the game with our four groups of different audio stimuli.

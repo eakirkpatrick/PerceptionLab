@@ -5,28 +5,25 @@ header-includes: \usepackage{placeins}
 
 # Methods
 
-DV= game performance, milliseconds
-IV = control, erratic, contant {beeping at the same decibel} 
+Participants were presented with a total of two tasks. Which task they were assigned first was randomly selected. 
 
-Two groups, each will be randomly assigned to erratic or constant beeping and will complete a game with headphones on
+Task one: this task was a basic memory retrieval task for single digit multiplication rules. The participants were to answer basic multiplication facts using the keyboard. The stimuli would persist until the participant answered the question presented correctly. Thus the reaction time of the participant answering the question correctly was measured. The variable of interest in this task was the reaction time of the participant. The reaction time was the time from when participant was presented with the multiplication question to when the participant answered the question correctly. The participant must answer the question correctly in order for the next stimuli to be presented.
 
-Between subjects factor- order of control and beeping 
-Between subjects factors - type of beeping {erratic or constant}
-	4 Groups 
-Randomly assigned which task first 
-Randomly assigned which order of beeping condition
+Task two: this task was a basic computer game. The game was meant to imitate the popular smartphone game flappy bird. The game requires the participant to tap the space bar at a constant rate to keep the bird in the middle of the screen. The obstacles would remain in the middle to require the participant to tap at a constant rate. All stimuli mentioned would be presented to the participant completing this task as well. The variable of interest in task two is the performance on the game. Specifically it is the time from the start of the game to the time of failure in the game. We expect an improvement in performance after more exposure so we first presented the participant with a single practice round before without audio stimuli. The participant is then presented with one of the four stimuli and plays the game one more time with audio until failure. The constant time interval audio stimuli will directly coincide with the requirement to tap the space bar to keep the bird in the middle of the screen.
 
 
-Here is how we did the experiment. Our basic design was to measure reaction time and probability of being correct under two different conditions: fear vs. joy and sad vs. happy. 
 
 ## Stimuli
 
-We used some cool equipment
+Each participant was presented with four different stimuli presented in a random order. The first stimuli is no noise presented to the participant. In this condition the participant completed the task with headphones on with no noise presented. The second stimuli was a tone presented at a constant time interval. Everything about the tone was constant, including the frequency of the tone and the loudness of the tone. The time interval between the tones remained a constant 2 seconds. The next stimuli presented was the same tone presented in the previous condition yet with variable time intervals between tone presentation. These intervals varied between .5 second and 4 seconds. The timing of the presentation of the tone was controlled using a built in python random number generator. The last stimuli presented was white noise. This was noise presented at equal intensity with varying frequency tones playing at a time. This was presented at 77 dB which was found to be the optimal decibel level for cognitive performance [@USHER2000]. In fact all tones in this experiment were presented at 77 dB to avoid any possible effects on the loudness of the noise causing any impairment on attention.
+
+The dependent variable measured depended on which task was performed. In the arithmetic recall task, the variable was reaction time from presentation of stimulus to correct answer presented by participant. The variable measured on the game task was time until failure. The time from when the game starts to the time of termination of the game (when the participant loses).
+
 
 ## Subjects
 
-Lots of eager students served as subjects. We are happy that they volunteered.
+Although the experiment was never actually run. The participants were going to be University of Colorado undergraduate psychology students. They were to be selected from PSYC 4165 11am lecture, and perform the experiment during their allotted lab time. 
 
 ## Procedure
 
-We presented stimuli on nice Macintosh computers running PsychoPy [@peirce_psychopy_psychophysics_2007; @peirce_generating_2009; @peirce_building_2018; @peirce_psychopy2_2019] software.  First we trained the subjects, followed by a 25 hour testing session. No bathroom breaks were allowed.
+We presented stimuli on nice Macintosh computers running PsychoPy [@peirce_psychopy_psychophysics_2007; @peirce_generating_2009; @peirce_building_2018; @peirce_psychopy2_2019] software. The participant was first briefed on the details of the experiment and told that they would be exposed to both visual and auditory stimuli. The participants were also told they were to complete basic arithmetic questions as well as playing a simple game similar to flappy bird. The participant was then asked if they wished to participate in the experiment. If the participant agreed then the experiment continued. The participant was randomly assigned on which task they would complete first. Then, it was randomly selected on which of the four audio stimuli would be presented to the participant. If the game task was being performed, the participant would have a short practice round to get used to the game. Whether the participant was being exposed to audio stimuli or not, the participant wore headphones through out the entire experiment in order to prevent external audio as much as possible. All stimuli was created with psychopy and standard python3.4. The game was created with pyGame.  

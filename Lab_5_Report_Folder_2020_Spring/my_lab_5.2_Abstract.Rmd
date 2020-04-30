@@ -7,4 +7,4 @@ header-includes: \usepackage{placeins}
 
 # Abstract
 
-The abstract is about 150 words long and explains what you did, why, and what you found.
+There is a belief that auditory stimulus can create adverse effects on a person’s attention and focus. The following experiment was intended to test the aforementioned belief. Students in an upper-division psychology class were going to participate in two different tasks that required their full attention, a simple math task and a simple video game similar; the order in which the tasks were presented would have been random. Secondly, there would have been four types of sound stimulus presented, no sound, a constant sound, an erratic sound, and white noise. The sound stimuli would have also been presented in a random order to all participants of the study. Unfortunately, due to the COVID-19 pandemic the experiment was unable to be carried out and therefore results are unknown.  
